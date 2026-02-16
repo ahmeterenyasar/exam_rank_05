@@ -87,10 +87,10 @@ int main(int ac, char **av)
 
     for (int i = 0; i < map.w * map.h; i++) {
         if (i > 0 && i % map.w == 0)
-            write(1, "\n", 1);
-        write(1, &map.m[i], 1);
+            putchar('\n');
+        putchar(map.m[i]);
     }
-    write(1, "\n", 1);
+    putchar('\n');
 
     free(map.m);
     return 0;
